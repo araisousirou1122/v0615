@@ -6,7 +6,7 @@ namespace v0615
         static Random rand = new Random();
         int[] vx = new int[3];
         int[] vy = new int[3];
-       
+
         public Form1()
         {
             InitializeComponent();
@@ -14,7 +14,7 @@ namespace v0615
             vx[0] = rand.Next(-10, 11);
             vy[0] = rand.Next(-10, 11);
             vx[1] = rand.Next(-10, 11);
-            vy[1] = rand.Next(-10, 11); 
+            vy[1] = rand.Next(-10, 11);
             vx[2] = rand.Next(-10, 11);
             vy[2] = rand.Next(-10, 11);
         }
@@ -50,16 +50,16 @@ namespace v0615
             if (label2.Left < 0)
             {
 
-                vx[1]= Math.Abs(vx[1]);
+                vx[1] = Math.Abs(vx[1]);
             }
             else if (label2.Right > ClientSize.Width)
             {
-                vx[1]= -Math.Abs(vx[1]);
+                vx[1] = -Math.Abs(vx[1]);
             }
             if (label2.Top < 0)
             {
 
-                vy[1]= Math.Abs(vy[1]);
+                vy[1] = Math.Abs(vy[1]);
             }
             else if (label2.Bottom > ClientSize.Height)
             {
@@ -88,6 +88,17 @@ namespace v0615
                 vy[2] = -Math.Abs(vy[2]);
             }
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                MessageBox.Show($"{i}");
+            }
+                MessageBox.Show($"done {a}");
+            
+        }
         }
     }
-}
